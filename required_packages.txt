@@ -1,2 +1,2 @@
-npm i express cors
+npm i
 npm install -g nodemon
