@@ -123,7 +123,7 @@ async function run() {
       // res.send("Found the data");
       const newEvent = req.body;
       newEvent.banner = req.file.filename;
-      console.log(newEvent);
+      // console.log(newEvent);
       eventCollection.insertOne(newEvent)
       .then((eventDes) => {
         res.status(200).send({
@@ -242,7 +242,7 @@ async function run() {
     //Get Blog by ID
   app.get('/blogs/:blogId',async (req,res) => {
     const blogId = req.params.blogId;
-    console.log(blogId);
+    console.log("blog id",blogId);
     const oId = new ObjectId(blogId);
     blogCollection.find({"_id": oId}).next()
     .then((blog)=> {
